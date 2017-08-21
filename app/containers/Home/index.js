@@ -47,6 +47,7 @@ export default class Home extends React.PureComponent {
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
 
         <div className="inputContainer">
+            <h1> Manage your tasks!</h1>
           <input type="text" className="todoInput" onChange={this.handleItem} value={this.state.inputItem}/>
           <input type="submit" value="Add to List" className="todoButton" onClick={this.storeItem}/>
         </div>

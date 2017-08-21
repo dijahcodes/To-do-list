@@ -4,12 +4,14 @@
   display:flex;
   flex-direction:column;
   min-height:100vh;
+  font-family: 'Inconsolata', sans-serif;
 }
 .todoList {
   display: flex;
   flex-direction: column;
   width: 50%;
   margin: 0 auto;
+  font-family: 'Inconsolata', sans-serif;
 }
 .listItem {
   background: #CCCCCC;
@@ -41,4 +43,10 @@
 }
 .todoButton:active {
   background:  #00AAFF;
+}
+
+h1 {
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
 }
