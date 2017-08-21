@@ -1,0 +1,20 @@
+/* Home Styles */
+
+.container {
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+.todoList {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0;
+}
+.listItem {
+  background: #CCCCCC;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  font-variant: small-caps;
+}
