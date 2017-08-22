@@ -55,6 +55,18 @@ export default class Home extends React.PureComponent {
     }
   }
 
+  deleteList = () => {
+
+    var listItems = this.state.listItems;
+
+    var inputItem = this.state.inputItem;
+
+    this.setState({
+      listItems: [],
+      inputItem: []
+    })
+  }
+
   render() {
     return (
       <div className="container">
@@ -62,8 +74,9 @@ export default class Home extends React.PureComponent {
 
         <div className="inputContainer">
             <h1> Manage your tasks!</h1>
-          <input type="text" className="todoInput" onChange={this.handleItem} value={this.state.inputItem} onKeyDown={this.enterKey}/>
+          <input type="text" className="todoInput" onChange={this.handleItem} value={this.state.inputItem} onKeyDown={this.enterKey} placeholder="What do you need to do?"/>
           <input type="submit" value="Add to List" className="todoButton" onClick={this.storeItem}/>
+          <input type="submit" value="Delete All" className="deleteAll" onClick={this.deleteList} />
         </div>
           <div className="todoList">
           {this.state.listItems.map((item, index) => (
