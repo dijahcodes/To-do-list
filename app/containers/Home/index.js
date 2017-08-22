@@ -47,6 +47,7 @@ export default class Home extends React.PureComponent {
 
   }
 
+// Enabling the use of the enter key instead of clicking
   enterKey = (event) => {
     var key = event.keyCode;
 
@@ -54,7 +55,7 @@ export default class Home extends React.PureComponent {
       this.storeItem();
     }
   }
-
+// Function to clear the To-do List
   deleteList = () => {
 
     var listItems = this.state.listItems;
@@ -67,6 +68,7 @@ export default class Home extends React.PureComponent {
     })
   }
 
+
   render() {
     return (
       <div className="container">
@@ -74,9 +76,14 @@ export default class Home extends React.PureComponent {
 
         <div className="inputContainer">
             <h1> Manage your tasks!</h1>
-          <input type="text" className="todoInput" onChange={this.handleItem} value={this.state.inputItem} onKeyDown={this.enterKey} placeholder="What do you need to do?"/>
+              <input type="text" className="todoInput" onChange={this.handleItem} value={this.state.inputItem} onKeyDown={this.enterKey} placeholder="What do you need to do?"/>
+        <div className="btn">
+
           <input type="submit" value="Add to List" className="todoButton" onClick={this.storeItem}/>
           <input type="submit" value="Delete All" className="deleteAll" onClick={this.deleteList} />
+
+        </div>
+
         </div>
           <div className="todoList">
           {this.state.listItems.map((item, index) => (
