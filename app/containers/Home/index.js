@@ -41,6 +41,20 @@ export default class Home extends React.PureComponent {
     }
   };
 
+  strikeItem = (event) => {
+    var item = event.target;
+    item.style.textDecoration = 'line-through'
+
+  }
+
+  enterKey = (event) => {
+    var key = event.keyCode;
+
+    if (key === 13) {
+      this.storeItem();
+    }
+  }
+
   render() {
     return (
       <div className="container">
@@ -48,13 +62,14 @@ export default class Home extends React.PureComponent {
 
         <div className="inputContainer">
             <h1> Manage your tasks!</h1>
-          <input type="text" className="todoInput" onChange={this.handleItem} value={this.state.inputItem}/>
+          <input type="text" className="todoInput" onChange={this.handleItem} value={this.state.inputItem} onKeyDown={this.enterKey}/>
           <input type="submit" value="Add to List" className="todoButton" onClick={this.storeItem}/>
         </div>
           <div className="todoList">
           {this.state.listItems.map((item, index) => (
-            <div className="listItem" key={index}>
+            <div className="listItem" key={index} onClick={this.strikeItem}>
               {item}
+
             </div>
           ))}
 
