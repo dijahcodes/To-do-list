@@ -10,6 +10,8 @@ import Helmet from 'react-helmet';
 import './style.css';
 import './styleM.css';
 
+import Slider from 'components/Slider';
+
 export default class Home extends React.PureComponent {
 
   constructor() {
