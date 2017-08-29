@@ -1,0 +1,93 @@
+/* Home Styles */
+
+.container {
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  font-family: 'Inconsolata', sans-serif;
+}
+.todoList {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  font-family: 'Inconsolata', sans-serif;
+}
+.listItem {
+  background: #CCCCCC;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+
+}
+.inputContainer {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.todoInput {
+  padding: 10px;
+  font-size: 1.1em;
+  margin-top: 30px;
+  outline: none;
+}
+.todoButton {
+  padding: 10px;
+  margin-top: 10px;
+  background: #00CCFF;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Iconsolata', sans-serif;
+  outline: none;
+  color: #FFFFFF;
+  width: 100px;
+
+
+}
+.todoButton {
+  float: left;
+}
+
+.deleteAll {
+  padding: 10px;
+  margin-top: 10px;
+  background: #FB3640;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Iconsolata', sans-serif;
+  outline: none;
+  color: #FFFFFF;
+  width: 100px;
+
+
+}
+
+.deleteAll {
+  display: inline;
+}
+.todoButton:hover {
+  background: #00DDFF;
+}
+
+.deleteAll:hover {
+  background: #FC626A;
+}
+.todoButton:active {
+  background:  #00AAFF;
+}
+.deleteAll:active {
+  background: #DB2B34;
+}
+
+h1 {
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
